@@ -23,8 +23,27 @@
   "private": true,
   "cds": {
     "requires": {
-      "[production]": {
-        "auth": "xsuaa"
+      "[sqlite]": {
+        "db": {
+          "kind": "sqlite",
+          "impl": "@cap-js/sqlite",
+          "credentials": {
+            "url": "db.sqlite"
+          }
+        }
+      },
+      "[pg]": {
+        "db": {
+          "kind": "postgres",
+          "impl": "@cap-js/postgres",
+          "credentials": {
+            "host": "172.17.0.2",
+            "port": "5432",
+            "user": "postgres",
+            "password": "lasm0930L!!",
+            "database": "my_first_db"
+          }
+        }
       }
     }
   },
