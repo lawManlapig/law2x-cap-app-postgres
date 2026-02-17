@@ -18,7 +18,9 @@
     "watch-law2x-people-app": "cds watch --open law2xpeopleapp/index.html?sap-ui-xx-viewCache=false --livereload false",
     "undeploy": "cf undeploy law2x-basic-postgress --delete-services --delete-service-keys --delete-service-brokers",
     "build": "rimraf resources mta_archives && mbt build --mtar archive",
-    "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
+    "dpg": "cds deploy --profile pg",
+    "dsql": "cds deploy --profile sqlite"
   },
   "private": true,
   "cds": {
@@ -41,7 +43,7 @@
             "port": "5432",
             "user": "postgres",
             "password": "lasm0930L!!",
-            "database": "my_first_db"
+            "url": "my_first_db"
           }
         }
       }
